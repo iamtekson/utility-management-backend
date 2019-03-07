@@ -1,0 +1,36 @@
+ {% extends 'base.html' %}
+
+{% block content %}
+ <section id="contact">
+                  <div class="container contact">
+                    <div class="well well-sm">
+                      <h1 class="text-light text-center heading wow fadeInUp">Contact Us</h1>
+                    </div><br>
+                  
+                  <div class="row">
+                    <div class="col-md-7 wow slideInLeft">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3514.215414847917!2d83.96974236467051!3d28.261484282565632!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3995937fcb0643d1%3A0x1b63bf7043241499!2sLamachaur%2C+Pokhara+33700!5e0!3m2!1sen!2snp!4v1530104874316" width="100%" height="370" frameborder="0" style="border:0" ></iframe>
+                      </div>
+
+                      <div class="col-md-5 wow slideInRight">
+                          <h3 class="text-light wow fadeInUp">Share Your Message With Us</h3>
+                        <form id="contact-form" method="post" action="/form.php">
+                          <div class="form-group">
+                            <input name="name" type="text" class="form-control" name="" value="" placeholder="Your Name" required>
+                          </div>
+                          <div class="form-group">
+                            <input name="email" type="email" class="form-control" value="" placeholder="Your E-mail" required>
+                          </div>
+                          <div class="form-group">
+                            <input name="" type="tel" class="form-control" value="" placeholder="Phone">
+                          </div>
+                          <div class="form-group">
+                            <textarea name="message" class="form-control" type="text" name="" rows="3" placeholder="Message"></textarea>
+                          </div>
+                            <input type="submit" class="btn button submit" value="Submit">
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </section> 
+{% endblock %}

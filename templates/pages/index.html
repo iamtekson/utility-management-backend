@@ -1,0 +1,85 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<section class="container-fluid main-1"></section>
+       <div id="sidebar" class="sidebar collapsed">
+        <!-- Nav tabs -->
+        <div class="sidebar-tabs">
+            <ul role="tablist">
+                <li><a href="#home" role="tab"><i class="fa fa-bars"></i></a></li>
+                <li><a href="#profile" role="tab"><i class="fa fa-user"></i></a></li>
+                <li><a href="#messages" role="tab"><i class="fa fa-envelope"></i></a></li>
+                <li><a href="#settings" role="tab"><i class="fa fa-cog"></i></a></li>
+            </ul>
+
+            <ul role="tablist">
+                <li><a href="#settings" role="tab"><i class="fa fa-cog"></i></a></li>
+            </ul>
+
+            <ul role="tablist">
+                <li><a href="#messages" role="tab"><i class="fa fa-envelope"></i></a></li>
+            </ul>
+
+            <ul role="tablist">
+                <li><a href="#profile" role="tab"><i class="fa fa-user"></i></a></li>
+            </ul>
+        </div>
+
+        <!-- Tab panes -->
+        <div class="sidebar-content">
+            <div class="sidebar-pane" id="home">
+                <h1 class="sidebar-header text-center">
+                    Function
+                    <span class="sidebar-close"><i class="fa fa-caret-left"></i></span>
+                </h1>
+
+                <p>consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt <a href="#">contactkld</a> Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+
+                <h4 class="text-center">Add Your Shapefile Here</h4>
+                <input  class = 'side-input' type="file" name="text" placeholder="Input Your data" maxlength="50" /><hr class="light">
+
+                <h4 class="text-center">Layer Control</h4>
+                <p><i class="far fa-square"></i> Water Pipeline</p>
+                <p><i class="far fa-square"></i> Transmission Line</p>
+                <p><i class="far fa-square"></i> Road Network</p>
+                <p><i class="far fa-square"></i> Drainage Network</p>
+
+                <p><button class="side-button1">View all layers</button></p><hr class="light">
+
+                <h4 class="text-center">Analysis Operations</h4>
+                <p><button class="side-button">Buffer</button></p>
+                <p><button class="side-button">Clip</button></p>
+                <p><button class="side-button">Route Finder</button></p><hr class="light">
+
+                <p><button class="side-button3">Generate Report</button></p>
+
+
+                
+            </div>
+
+            <div class="sidebar-pane" id="profile">
+                <h1 class="sidebar-header">Profile<span class="sidebar-close"><i class="fas fa-caret-left"></i></span></h1>
+                    <p class="text-center"><img src="{% static 'img/profile/1.jpg' %} " class="profile-img" alt="user-profile"></p>
+                    <h5>User Name : <span>JOHN DOE</span></h5>
+                    <h5>Email  : <span>john343@gamil.com</p></span>
+                    <h5>Community : <span>Water Pipe Management</span></h5>
+                    <button class="side-button1">More Info</button>
+
+            </div>
+
+            <div class="sidebar-pane" id="messages">
+                <h1 class="sidebar-header">Messages<span class="sidebar-close"><i class="fa fa-caret-left"></i></span></h1>
+            </div>
+
+            <div class="sidebar-pane" id="settings">
+                <h1 class="sidebar-header">Settings<span class="sidebar-close"><i class="fa fa-caret-left"></i></span></h1>
+            </div>
+        </div>
+    </div>
+
+    <div id="map" style="width: 100%; height: 600px;" class="sidebar-map"></div>
+
+    <script src="{% static 'lib/js/leaflet-sidebar.js' %} "></script>
+    <script type="text/javascript" src="{% static 'main_file/leaflet_main.js' %} "></script>
+
+{% endblock %}

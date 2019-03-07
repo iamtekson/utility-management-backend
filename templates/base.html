@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Required Bootstrap files -->
+    <link rel="stylesheet" type="text/css" href="{% static 'lib/css/bootstrap.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'lib/css/bootstrap.min.css' %}">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" type="text/css" href="{% static 'main_file/main.css' %}">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet"> <!-- Railway font-->
+    <link href="https://fonts.googleapis.com/css?family=Goudy+Bookletter+1911" rel="stylesheet"> <!-- Goudy Bookletter 1911 -->
+
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" type="text/css" href="{% static 'lib/leaflet/leaflet.css' %}">
+    <link rel="stylesheet" href="{% static 'lib/css/leaflet-sidebar.css' %} " />
+
+    <!-- JavaScript Files -->
+    <script type="text/javascript" src="{% static 'lib/leaflet/leaflet.js' %} "></script>
+	<title>Utility Management</title>
+
+</head>
+<body>
+
+<!-- Navbar -->
+{% include 'partials/_navbar.html' %}
+
+{% block content %}  {% endblock %}
+
+<!-- Footer -->
+{% include 'partials/_footer.html' %}
+
+
+
+<script type="text/javascript" src=" {% static 'lib/js/bootstrap.min.js' %} "></script>
+</body>
+</html>
